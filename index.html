@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>WeatherCast Application </title>
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/dashboard.css">
+</head>
+<body>
+    <header>
+    <div class="container-header">
+      <div class="logo">Weather<span>Cast</span></div>
+      <nav>
+        <a href="index.html">Home</a>
+        <a href="Pages/page2.html" class="btn">Activity Recommendation Manager</a>
+      </nav>
+    </div>
+    </header>
+
+    <style>
+        html, body {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+        }
+
+        body {
+            background-image: url("Images/image1.jpg"); /* */
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-repeat: repeat-y;
+
+            flex-direction: column;
+            color: white;
+            font-family: Arial, sans-serif;
+        }
+
+        .overlaytext {
+            font-size: 4rem;
+            margin-bottom: 20px;
+            text-align: center;
+            padding: 40px;
+            text-align: center;
+            color: rgb(10, 30, 79);
+            width: 100%;
+        }
+
+        .overlaytext h1 {
+            font-size: 4rem;
+            margin-bottom: 20px;
+        }
+
+        .overlaytext p {
+            font-size: 1.5rem;
+            margin-bottom: 30px;
+        }
+    </style>
+
+    <div class="weathersection">
+        <section class="overlaytext">
+            <h1>Your Weather Buddy</h1>
+            <p>Weather analytics and activity recommendation</p>
+        </section>
+
+        <section>
+            <form class="weatherForm">
+                <input type="text" class="cityInput" placeholder="Enter Location">
+                <button type="submit">Get Weather</button>
+            </form>
+        </section>
+
+        <div class="resultRow">
+            <div class="card" style="display: none"></div>
+            <!-- summaryBox id for js function -->
+            <div class="QuickSummary" id="summaryBox" style="display:none">
+                <h2 class="summaryTitle">Quick Summary</h2>
+                <p id="avgTemp"></p>
+                <p id="rainRisk"></p>
+                <p id="activitySuggest"></p>
+                
+                <hr class="summaryDivider">
+                <h3 class="summarySubTitle">Suggested Activities</h3>
+                <ul id="recommendedList" class="recommendedList"></ul>
+            </div>
+        </div>
+
+        <!--compare location-->
+
+        <div class="QuickSummary">
+        <h2 style="color: rgb(10, 30, 79);">Plan your trips</h2>
+        <p>Compare two places and see which one is better for outdoor activities.</p>
+
+        <div class="compareForm">
+            <input type="text" class="cityA" placeholder="City A (e.g., Kuala Lumpur)">
+            <input type="text" class="cityB" placeholder="City B (e.g., Langkawi)">
+            <button type="button" class="compareBtn">Compare</button>
+        </div>
+
+        <!-- js function use compareResukt class to show output --> 
+        <div class="compareResult"></div>
+
+        <script src="index.js"></script>
+    </div>
+</body>
+
+</html>

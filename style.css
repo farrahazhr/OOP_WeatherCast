@@ -1,0 +1,90 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+input, button {
+    margin: 5px;
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+
+.window {
+  padding: 0 !important;
+}
+
+/* reset and default design */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    line-height: 1.6;
+    color: #333;
+    background: #f8f9fa;
+}
+
+/* Container & Button */
+.container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+.btn {
+    display: inline-block;
+    padding: 10px 30px;
+    background: rgb(10,30,79);
+    color: #fff;
+    border-radius: 4px;
+    font-weight: 600;
+    transition: .3s;
+    text-decoration: none;
+}
+
+/* header */
+header {
+    background: #fff;
+    box-shadow: 0 2px 10px rgba(0,0,0,.1);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    width: 100%;
+}
+
+header .container-header{
+  max-width: none;   /* to make it full size */
+}
+
+.container-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 0;
+}
+
+.logo {
+    font-size: 28px;
+    font-weight: 700;
+    color: #ff6b6b;
+    padding-left: 3%;
+}
+
+.logo span {
+    color: #4ecdc4;
+}
+
+nav a {
+    margin-left: 20px;
+    color: #333;
+    font-weight: 600;
+    text-decoration: none;
+}

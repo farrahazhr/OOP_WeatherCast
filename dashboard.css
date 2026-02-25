@@ -1,0 +1,241 @@
+/* base default styling */
+html, body{
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+
+body{
+  font-family: Arial, sans-serif;
+  background-color: hsl(0, 0%, 95%);
+}
+
+/* font */
+h1{
+  color: rgb(10, 30, 79);
+  font-size: 3.5rem;
+  margin-top: 0;
+  margin-bottom: 25px;
+}
+
+p{
+  color: rgb(10, 30, 79);
+  font-size: 1.5rem;
+  margin: 5px 0;
+}
+
+/* weatherbox */
+.weathersection{
+  width: 100%;
+  padding: 50px 20px 40px;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+}
+
+.layout{
+  display: flex;
+  width: 100%;
+  min-height: 100vh;
+}
+
+/* get weather form */
+.weatherForm{
+  margin: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.cityInput{ /* user input */
+  padding: 10px;
+  font-size: 2rem;
+  font-weight: bold;
+  border: 2px solid hsla(0, 0%, 20%, 0.3);
+  border-radius: 10px;
+  margin: 10px;
+  width: 300px;
+}
+
+/* submit button */
+button[type="submit"]{
+  padding: 10px 20px;
+  font-weight: bold;
+  font-size: 2rem;
+  background-color: rgb(10, 30, 79);
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button[type="submit"]:hover{
+  background-color: rgb(10, 30, 79);
+}
+
+/* to make the box side by side */
+.resultRow{
+  display: flex;
+  flex-direction: row !important;
+  gap: 30px;
+  width: 100%;
+  align-items: stretch;
+  flex-wrap: nowrap;
+}
+
+/* weather box */
+.card{
+  background: rgba(255,255,255,0.3);
+  backdrop-filter: blur(10px);
+  flex: 2;
+
+  color: white;
+  border: 1px solid rgb(179, 177, 177);
+  padding: 40px;
+  border-radius: 15px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+
+  width: 100%;
+  max-width: 1100px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+  gap: 15px;
+
+  background-blend-mode: overlay;
+  background-color: rgba(255,255,255,0.45);
+}
+
+/* flex overrides so card will not force wrap */
+.resultRow .card{
+  flex: 2;
+  width: auto;       
+  max-width: none;    
+  min-width: 0;       
+}
+
+/* font style in the card */
+.cityDisplay, .tempDisplay{
+  font-size: 3.5rem;
+  font-weight: bold;
+  color: rgb(10, 30, 79);
+  margin-bottom: 25px;
+}
+
+.humidityDisplay{
+  color: rgb(10, 30, 79);
+  font-weight: bold;
+  margin-bottom: 25px;
+}
+
+.descDisplay{
+  font-style: italic;
+  font-weight: bold;
+  font-size: 2rem;
+}
+
+.errorDisplay{
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: rgb(10, 30, 79);
+}
+
+/*quick summary box*/
+.QuickSummary{
+  flex: 1.2;
+  background: rgba(255,255,255,0.3);
+  backdrop-filter: blur(10px);
+  padding: 25px;
+  border-radius: 15px;
+  box-shadow: 0 8px 20px rgba(0,0,0,.2);
+}
+
+.summaryTitle{
+  color: rgb(10,30,79);
+  margin-bottom: 15px;
+  font-size: 1.6rem;
+  font-weight: 700;
+}
+
+/* addded one line to divide the section */
+.summaryDivider{
+  margin: 15px 0;
+  border: none;
+  border-top: 1px solid rgba(10,30,79,0.2);
+}
+
+/* for suggested activities font text */
+.summarySubTitle{ 
+  color: rgb(10,30,79);
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+}
+
+/* Suggested activities list in summary */
+.recommendedList{
+  list-style: none;
+  padding-left: 0;
+  margin: 0;
+}
+
+.recommendedList li{
+  background: rgba(255,255,255,0.35);
+  padding: 10px 12px;
+  border-radius: 10px;
+  margin-bottom: 10px;
+  color: rgb(10,30,79);
+  font-weight: 600;
+}
+
+/* page 2 styling */
+#activityList{
+  margin-top: 12px;
+}
+
+.activityItem{
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 12px;
+
+  padding: 10px 12px;
+  margin: 8px 0;
+
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  background: #fff;
+}
+
+.activityItem button{
+  padding: 6px 10px;
+  border: 1px solid #bbb;
+  border-radius: 6px;
+  background: #f7f7f7;
+  cursor: pointer;
+}
+
+.activityItem button:first-of-type{
+  margin-left: auto;
+}
+
+/* compare location styling */
+.compareForm{
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin-top: 10px;
+}
+
+.compareForm input{
+  flex: 1;
+  min-width: 220px;
+  padding: 10px;
+  font-size: 1rem;
+}
+
+.compareForm button{
+  padding: 10px 16px;
+  cursor: pointer;
+}

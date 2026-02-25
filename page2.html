@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>OpenWeather Application</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/dashboard.css">
+</head>
+
+<body>
+
+<header>
+    <div class="container-header">
+        <div class="logo">Weather<span>Cast</span></div>
+        <nav>
+            <a href="../index.html">Home</a>
+            <a href="../Pages/page2.html" class="btn">Activity Recommendation Manager</a>
+        </nav>
+    </div>
+</header>
+
+<h1>Activity Recommendation</h1>
+
+<div id="activityForm">
+  <input type="text" id="activityName" placeholder="Activity Name" required>
+
+  <select id="activityType">
+    <option value="Indoor">Indoor</option>
+    <option value="Outdoor">Outdoor</option>
+  </select>
+
+  <!-- for add button -->
+  <button id="addButton" type="button">Add</button>
+</div>
+
+<p id="feedbackMsg"></p>
+<div id="activityList"></div>
+
+<script src="../js/page2.js"></script>
+
+</body>
+</html>
